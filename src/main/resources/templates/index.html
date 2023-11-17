@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<h1 th:text="${saludo}"></h1>
+<h1 th:text="${titulo}"></h1>
+<h2 th:text="${subtitulo}"></h2>
+
+<table>
+  <thead>
+  <tr>
+    <th>legajo</th>
+    <th>nombre</th>
+    <th>apellido</th>
+    <th>especialidad</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="listaEstudiantes: ${lista_estudiantes}">
+    <td  th:text="${listaEstudiantes.legajo}"></td>
+    <td  th:text="${listaEstudiantes.nombre}"></td>
+    <td  th:text="${listaEstudiantes.apellido}"></td>
+    <td  th:text="${listaEstudiantes.especialidad}"></td>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>
